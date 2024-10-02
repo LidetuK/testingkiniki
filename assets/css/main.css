@@ -1,0 +1,438 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #EA9D2C;
+    --secondary: #E6EA2C;
+    --tertiary: #E7CB2C;
+    --white-70: rgba(255, 255, 255, 0.7);
+    --white-40: rgba(255, 255, 255, 0.4);
+    --white-20: rgba(255, 255, 255, 0.2);
+    --white-10: rgba(255, 255, 255, 0.1);
+    --grey-10: rgba(217, 217, 217, 0.1);
+    --grey: #1b1b1b;
+    --black: #0E0A0F;
+    --white: #ffffff;
+    --green: #2DEB6B;
+    --red: #EB322D;
+
+    --gradient: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+    --gradient2: linear-gradient(180deg, rgba(227, 111, 4, 0.3) 0%, rgba(242, 205, 13, 0.3) 100%);
+    --gradient3: linear-gradient(90deg, rgba(234, 157, 44, 0.12) 0%, rgba(230, 234, 44, 0.12) 100%);
+
+    --dprimary: #EB652D;
+    --dsecondary: #CA4A13;
+    --dtertiary: #93360E;
+    --dgrey-100: #9F9F9F;
+    --dgrey-200: #371405;
+    --dgrey-300: #2F2F2F;
+    --dgrey-400: #241704;
+    --dgrey: #1e1e1e;
+    --dblack: #110e0e;
+
+    --font-body: "Manrope", sans-serif;
+    --font-title: "Merriweather", sans-serif;
+
+    --font-2xl: 4.25rem;
+    --font-xl: 2.6875rem;
+    --font-lg: 2.125rem;
+    --font-md: 1.6875rem;
+    --font-base: 1.125rem;
+    --font-nrm: 1rem;
+    --font-sm: 0.6875rem;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-base);
+  scroll-behavior: smooth;
+  background-color: var(--black);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--primary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6D460B;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+.text-yellow-custom {
+  color: var(--primary);
+}
+
+.text-green-custom {
+  color: var(--green);
+}
+
+.text-red-custom {
+  color: var(--red);
+}
+
+.bg-green-custom {
+  background-color: var(--green);
+}
+
+.bg-yellow-custom {
+  background-color: var(--primary);
+}
+
+.bg-red-custom {
+  background-color: var(--red);
+}
+
+.bg-dsecondary-custom {
+  background-color: var(--dsecondary);
+}
+
+#landing-page,
+#resources-page,
+.popup-box {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+#dashboard-page,
+#certificates-page {
+  background-color: var(--dblack);
+  color: var(--white);
+}
+
+#challenge-setup-form,
+#challenge-verify-form,
+.challenge-card,
+#accounts-overview #account-chart,
+#challenge-chart,
+.challenge-stats article,
+#challenge-overview aside,
+#balance-equity-overview,
+.step-pills-cover,
+#payout-form section {
+  background: var(--dgrey);
+}
+
+.title-lg-gradient,
+.title-xl,
+.title-lg,
+.title-md-gradient,
+.title-md {
+  font-family: var(--font-title);
+}
+
+
+.title-lg-gradient,
+.title-xl,
+.title-lg,
+.caption-gradient,
+button {
+  font-weight: bold;
+}
+
+.title-lg-gradient,
+.title-lg,
+.caption-lg-colored,
+.caption-lg-dcolored,
+.caption-lg {
+  font-size: var(--font-lg);
+}
+
+@media (min-width: 768px) {
+  .title-lg-gradient {
+    font-size: var(--font-xl);
+  }
+}
+
+.title-xl {
+  font-size: var(--font-xl);
+}
+
+.title-md,
+.title-md-gradient,
+.text-medium {
+  font-size: var(--font-md);
+}
+
+.title-lg-gradient,
+.btn-nav,
+.title-md-gradient,
+.caption-gradient {
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#dashboard-page .title-lg {
+  letter-spacing: 0.04rem;
+}
+
+.caption-lg-colored {
+  color: var(--secondary);
+}
+
+.caption-lg-dcolored {
+  color: var(--dprimary);
+}
+
+.caption-faded {
+  color: var(--white-70);
+}
+
+.caption-nrm-faded {
+  font-size: var(--font-nrm);
+  color: var(--white-70);
+}
+
+.caption-nrm-colored {
+  font-size: var(--font-nrm);
+  color: var(--dsecondary);
+}
+
+button,
+a,
+button:hover,
+a:hover,
+.slider,
+.btn-dtab {
+  cursor: pointer;
+}
+
+.btn-nav:hover,
+.btn-ghost:hover {
+  background-image: none;
+  color: var(--secondary);
+  background-clip: none;
+  border-color: var(--secondary);
+}
+
+.btn-cta,
+.btn-purchase {
+  background: var(--gradient2);
+  border-image-source: linear-gradient(185.02deg,
+      #584a4a 3.02%,
+      #e36f04 56.17%,
+      #584a4a 82.75%,
+      #584a4a 109.33%);
+  box-shadow: 0 0 0 2px #e1e6ec4d;
+}
+
+.btn-dcta {
+  background-color: var(--dprimary);
+}
+
+.btn-cta:hover,
+.btn-purchase:hover,
+.btn-tab.active:hover {
+  background-color: var(--secondary);
+}
+
+.btn-dtab.active:hover,
+.btn-dcta:hover {
+  background-color: var(--tertiary);
+}
+
+.btn-tab.active {
+  background: var(--gradient2);
+}
+
+.btn-dtab-container {
+  background-color: var(--dgrey-200);
+}
+
+.btn-dtab.active {
+  background: var(--dsecondary);
+}
+
+.btn-close {
+  font-size: 3rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.btn-close:hover {
+  color: var(--secondary);
+}
+
+.terms-link {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+a:hover,
+.terms-link:hover {
+  color: var(--secondary);
+}
+
+.white-10-divider {
+  border: 1px solid var(--white-10);
+}
+
+.white-20-divider {
+  border: 1px dashed var(--white-20);
+}
+
+.white-40-divider {
+  border: 1px solid var(--white-40);
+}
+
+.pricing-box,
+.btn-tab-container,
+.pricing-cta-cover {
+  background: var(--gradient3);
+}
+
+select,
+#purchase-form input[type="email"],
+#challenge-verify-form input[type="text"],
+#challenge-verify-form input[type="date"] {
+  @apply w-full px-4 py-6 leading-tight border rounded appearance-none;
+}
+
+select,
+#purchase-form input[type="email"] {
+  background: var(--gradient3);
+  color: var(--white-70);
+  border: 1px solid;
+  border-image: var(--gradient2) 1;
+}
+
+#challenge-verify-form input[type="text"],
+#challenge-verify-form input[type="date"] {
+  background-color: var(--dgrey-400);
+  border: 1px solid var(--dtertiary);
+}
+
+select:hover,
+#purchase-form input[type="email"]:hover,
+#purchase-form input[type="email"]:focus-within,
+#challenge-verify-form input[type="text"]:hover,
+#challenge-verify-form input[type="date"]:hover,
+#challenge-verify-form input[type="text"]:focus-within,
+#challenge-verify-form input[type="date"]:focus-within {
+  border: 1px solid var(--secondary);
+}
+
+#purchase-form label,
+#challenge-verify-form label {
+  font-weight: bold;
+  color: var(--white-70);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.pricing-box {
+  border: 1px solid var(--primary);
+  overflow-x: auto;
+}
+
+#challenge-setup-form .phase-table {
+  overflow-x: auto;
+}
+
+.phase-table table {
+  white-space: nowrap;
+}
+
+.phase-table table tr {
+  border-bottom: 1px solid var(--white-10);
+}
+
+.phase-table table tbody tr:last-child {
+  border-bottom: 0;
+}
+
+.phase-table tr td:nth-child(2),
+.phase-table td:nth-child(3),
+.phase-table td:nth-child(4),
+.phase-table td:nth-child(5),
+.phase-table td:nth-child(6),
+.phase-table td:nth-child(7) {
+  color: var(--primary);
+}
+
+.phase-table td,
+.phase-table th {
+  @apply px-4 py-4;
+}
+
+.phase-table tr td:first-child {
+  @apply font-bold;
+}
+
+.phase-table td span {
+  @apply inline-flex px-2 rounded-full;
+  background: var(--gradient2);
+}
+
+.dashboard-table {
+  background: var(--dgrey);
+  overflow-x: auto;
+}
+
+.dashboard-table table {
+  white-space: nowrap;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  @apply px-4 py-4;
+}
+
+.dashboard-table tr th {
+  background-color: var(--dgrey-300);
+  color: var(--dprimary);
+}
+
+.dashboard-table th {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: var(--font-sm);
+  letter-spacing: 0.04rem;
+}
+
+.dashboard-table table tbody tr {
+  border-bottom: 1px solid var(--white-20);
+}
+
+.dashboard-table .noborder {
+  border-bottom: 0;
+}
+
+.dashboard-table .table-pill,
+.trading-objectives-pill {
+  @apply inline-flex items-center px-2 py-1 rounded-full;
+  font-size: var(--font-nrm);
+}
+
+.popup-box-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  #credentials-popup.popup-box-overlay {
+    width: 66%;
+  }
+}
+
